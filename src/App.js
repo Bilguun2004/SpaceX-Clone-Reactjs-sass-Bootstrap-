@@ -1,24 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Falcon9 from "./components/Falcon9"
+import Home from './components/Home';
+import { Controller, Scene } from 'react-scrollmagic';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='falcon-9' element={<Falcon9/>}/>
+      </Routes>
+    </BrowserRouter>
+    // <Home/>
+    // <Falcon9/>
+  //   <div>
+  //     <div className='box'>
+  //       fghgfh
+  //     </div>
+  //   <Controller>
+  //     <Scene style={{position:'relative'}} duration={6000} pin>
+  //       <div className='stick'>Sticky Example</div>
+  //     </Scene>
+  //   </Controller>
+  //   <div style={{heigth:'100vh'}}>
+  //       fghgfh
+  //     </div>
+  // </div>
   );
 }
 

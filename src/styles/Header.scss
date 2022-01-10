@@ -1,0 +1,115 @@
+$text : rgb(255, 255, 255);
+@mixin spacefont($size , $weight){
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    font-size:$size;
+        font-weight:$weight;
+}
+.headercontainer{
+    height: 10%;
+    z-index: 9999999;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.2s;
+    .rightmenu{
+        left: 0;
+        position: absolute;
+        height: 2500px;
+        width: 100%;
+        background:rgba(0, 0, 0, 0.473);
+        transition: 0.1s;
+        display: flex;
+        .menu{
+            padding: 40px;
+            padding-top: 80px;
+            height: 100vh;
+            width: 300px;
+            background: rgb(0, 0, 0);
+            position: fixed;
+            top: 0;
+            right: 0;
+            display: flex;
+            color: white;
+            flex-direction: column;
+            &-text{
+                border-bottom: 1pt solid #252525;
+                cursor: pointer;
+                transition: .5s;
+                margin-top: 15px;
+                @include spacefont(14px,200);
+                &:hover{
+                    color: rgba(255, 255, 255, 0.377);
+                }
+            }
+            text-align: end;
+        }
+    }
+    .burgermenu{
+        margin-right: 0;
+        color: white;
+        padding-top: 9px;
+        @include spacefont(11px,800);
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        &-text{
+            cursor: pointer;
+        }
+        &-text::after{
+            content: '';
+            height: 1px;
+            width: 0;
+            background-color: $text;
+            display: block;
+            transition: .15s ease-in-out;
+        }
+        &-text:hover::after{
+            content: '';
+            height: 1px;
+            width: 100%;
+            background-color: $text;
+            display: block;
+        }
+    }
+    .img{
+        margin-left: 50px
+    }
+    .headertext{
+        @include spacefont(11px,800);
+        cursor: pointer;
+        color: white;
+        text-decoration: 0;
+    }
+    .texts{
+        margin-left: max(10%);
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        .t{
+            @include spacefont(11px,800);
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            padding-top: 18px;
+        }
+    }
+    .headertext::after{
+        content: '';
+        height: 1px;
+        width: 0;
+        background-color: $text;
+        display: block;
+        transition: .15s ease-in-out;
+    }
+    .headertext:hover::after{
+        content: '';
+        height: 1px;
+        width: 100%;
+        background-color: $text;
+        display: block;
+    }
+}

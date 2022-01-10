@@ -1,0 +1,248 @@
+@mixin spacefont($size , $weight){
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    font-size:$size;
+        font-weight:$weight;
+}
+body{
+    overflow-x: hidden;
+}
+.Home{
+    
+    &-textContainer{
+        height: 250px;
+        width: 450px;
+        display: flex;
+        align-items: left;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+        .text{
+            display: flex;
+            flex-direction: column;
+            color: white;
+            &-1{
+                @include spacefont(16px,500)
+            }
+            &-2{
+                @include spacefont(40px,600)
+            }
+        }
+    }
+    &-1{
+        background-image: url("../assets/home11.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        padding-left: 15%;
+        padding-top: 20%;
+        align-items: center;
+        .watch-button{
+            height: 54px;
+            width: 165px;
+            border: 2px white solid;
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            text-align: center;
+            @include spacefont(12px,550);
+            transition: color 0.2s linear;
+            &:hover{
+                color: black;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                background: rgb(255, 255, 255);
+                z-index: -1;
+                transition: transform 0.3s;
+                transform-origin:bottom;
+                transition-timing-function: cubir-bezier(0.5,1.6,0.4,0.7);
+            }
+            &::before{
+                transform: scaleY(0);
+            }
+            &:hover::before{
+                transform: scaleY(1);
+            }
+
+        }
+    }
+    &-2{
+        background-image: url("../assets/home2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        padding-left: 15%;
+        padding-top: 20%;
+        align-items: center;
+        background-position: center;
+        .watch-button{
+            height: 54px;
+            width: 165px;
+            border: 2px white solid;
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            text-align: center;
+            @include spacefont(12px,550);
+            transition: color 0.2s linear;
+            &:hover{
+                color: black;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                background: rgb(255, 255, 255);
+                z-index: -1;
+                transition: transform 0.3s;
+                transform-origin:bottom;
+                transition-timing-function: cubir-bezier(0.5,1.6,0.4,0.7);
+            }
+            &::before{
+                transform: scaleY(0);
+            }
+            &:hover::before{
+                transform: scaleY(1);
+            }
+            
+        }
+    }
+    &-3{
+        background-image: url("../assets/home3.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        padding-left: 15%;
+        padding-top: 20%;
+        align-items: center;
+        background-position: center;
+        .watch-button{
+            height: 54px;
+            width: 165px;
+            border: 2px white solid;
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            text-align: center;
+            @include spacefont(12px,550);
+            transition: color 0.2s linear;
+            &:hover{
+                color: black;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                background: rgb(255, 255, 255);
+                z-index: -1;
+                transition: transform 0.3s;
+                transform-origin:bottom;
+                transition-timing-function: cubir-bezier(0.5,1.6,0.4,0.7);
+            }
+            &::before{
+                transform: scaleY(0);
+            }
+            &:hover::before{
+                transform: scaleY(1);
+            }
+        }
+    }
+    &-4{
+        background-image: url("../assets/home4.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        padding-left: 15%;
+        padding-top: 20%;
+        align-items: center;
+        background-position: center;
+        .watch-button{
+            height: 54px;
+            width: 165px;
+            border: 2px white solid;
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            text-align: center;
+            @include spacefont(12px,550);
+            transition: color 0.3s linear;
+            &:hover{
+                color: black;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                background: rgb(255, 255, 255);
+                z-index: -1;
+                transition: transform 0.2s;
+                transform-origin:bottom;
+                transition-timing-function: cubir-bezier(0.5,1.6,0.4,0.7);
+            }
+            &::before{
+                transform: scaleY(0);
+            }
+            &:hover::before{
+                transform: scaleY(1);
+            }
+        }
+    }
+    &-5{
+        background-image: url("../assets/home5.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        padding-left: 15%;
+        padding-top: 20%;
+        align-items: center;
+        background-position: center;
+        .watch-button{
+            height: 54px;
+            width: 165px;
+            border: 2px white solid;
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            text-align: center;
+            @include spacefont(12px,550);
+            transition: color 0.3s ease-in-out;
+            &:hover{
+                color: black;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                background: rgb(255, 255, 255);
+                z-index: -1;
+                transition: transform 0.2s;
+                transform-origin:bottom;
+                transition-timing-function: cubir-bezier(0.5,1.6,0.4,0.7);
+            }
+            &::before{
+                transform: scaleY(0);
+            }
+            &:hover::before{
+                transform: scaleY(1);
+            }
+        }
+    }
+}
